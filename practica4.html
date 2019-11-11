@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<!-- Titulo informativo -->
+	<h3 style="text-align:center">Subir archivos de vídeo</h3>
+
+	<!-- Boton para subir el archivo (dentro de un div para poder posicionarlo en la pagina) -->
+	<div style="text-align:center">
+		<input type="file" accept="video/mp4" onchange="handleFileSelect(event)">
+	</div>
+
+	<br>
+
+	<!-- Elemento video, oculto por defecto (dentro de un div para poder posicionarlo en la pagina) -->
+	<div style="text-align:center">
+		<video id="video" autoplay hidden="true">
+			<source id="mp4_src" type="video/mp4">
+			El navegador no soporta la etiqueta de video
+		</video>
+	</div>
+
+	<!-- Placeholder para mensajes de incompatibilidad, oculto por defecto -->
+	<h3 id="no_soportado" hidden="true" style="text-align:center"></h3>
+
+	<br>
+
+	<!-- Controles de reproduccion (dentro de un div para poder agruparlos y posicionarlos en la pagina) -->
+	<div style="text-align:center">
+		<button onclick="playVideo()">Reproducir</button>
+		<button onclick="stopVideo()">Parar</button>
+		<button onclick="volumeUp()">Subir Volumen</button>
+		<button onclick="volumeDown()">Bajar Volumen</button>
+	</div>
+
+	<!-- cargar javascript despues de cargar el resto de la pagina -->
+	<script src="practica4.js"></script>
+</body>
+
+</html>
